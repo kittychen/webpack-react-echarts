@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TDChart</title>
+</head>
+<style>
+    .margin{
+        margin-left: 100px;
+    }
+    .margin>span{
+        display: inline-block;
+        width: 100px;
+        color: #0a66b7
+    }
+</style>
+<body>
+    <h2 style="text-align: center">基于ECharts的组件封装，统一用于图表开发</h2>
+    <div>
+        <!--<div>npm install TDChart</div>-->
+        <!--<div>import TDChart from TDChart</div>-->
+        <div>&lt;TDChart option={option} /&gt</div>
+        <div>API：</div>
+        <div class="margin"><span>option</span> 配置项、数据（必选）</div>
+        <div class="margin"><span>style</span> 图表容器的样式，默认高宽100%</div>
+        <div class="margin"><span>them</span> 主题</div>
+        <div class="margin"><span>event</span> 事件</div>
+        <div class="margin"><span>className</span> 类名</div>
+        <div class="margin"><span>...</span> 可扩展</div>
+    </div>
+    <br>
+    <br>
+    <div id="app"></div>
+</body>
+</html>
