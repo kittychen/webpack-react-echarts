@@ -44,7 +44,11 @@ class Container extends Component {
       option: option,
       option2: option2,
       theme: 'default',
-      event: {}
+      event: {},
+      style: {
+        width: '100%',
+        height: '100%',
+      }
     };
     this.update = this.update.bind(this);
     this.themeChange = this.themeChange.bind(this);
@@ -56,7 +60,11 @@ class Container extends Component {
     this.state.option2.series[0].data = [parseInt(Math.random()*1000), parseInt(Math.random()*1000), parseInt(Math.random()*1000), parseInt(Math.random()*1000), parseInt(Math.random()*1000), parseInt(Math.random()*1000), parseInt(Math.random()*1000)];
     console.log('update');
     this.setState({
-      option: this.state.option
+      option: this.state.option,
+      style: {
+        width: '200px',
+        height: '200px'
+      }
     });
   };
 
@@ -88,7 +96,10 @@ class Container extends Component {
           <TDChart option={option} theme={theme} event={event}/>
         </div>
         <div style={{height:400}}>
-          <TDChart option={option2}/>
+          <TDChart ref="chart" option={option2} style={{
+            width: '100%',
+            height: '100%',
+          }}/>
         </div>
       </div>
     );

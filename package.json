@@ -1,6 +1,6 @@
 {
   "name": "tdcharts",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "react echarts",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "echarts": "^4.1.0",
+    "element-resize-event": "^3.0.1",
+    "fast-deep-equal": "^2.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"

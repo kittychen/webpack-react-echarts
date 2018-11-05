@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import echarts from 'echarts'
+import elementResizeEvent from 'element-resize-event'
 
 class TDChart extends Component {
   constructor(props) {
@@ -19,7 +20,12 @@ class TDChart extends Component {
         theme = this.props.theme,
         event = this.props.event;
     let chart = echarts.getInstanceByDom(dom);
-    if (!chart || this.state.init) chart = echarts.init(dom,theme);
+    if (!chart || this.state.init){
+      chart = echarts.init(dom,theme);
+      elementResizeEvent(dom, ()=>{
+        chart.resize();
+      })
+    }
     if (Object.keys(event).length) {
       for(let e in event){
         chart.off(e);
